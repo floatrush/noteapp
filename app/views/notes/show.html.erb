@@ -1,7 +1,20 @@
-<p>
-  <%= @note.book%>
-  <%= @note.chapter%>
-  <%= @note.start_verse%>
-  <%= @note.end_verse%>
-  <%= @note.note_text%>
-</p>
+<table>
+  <tr>
+    <th>Book</th>
+    <th>Chapter</th>
+    <th>Start Verse</th>
+    <th>End Verse</th>
+    <th>Note</th>
+  </tr>
+  <tr>
+    <td style="text-align:center"><%= @note.book %></td>
+    <td style="text-align:center"><%= @note.chapter %></td>
+    <td style="text-align:center"><%= @note.start_verse %></td>
+    <td style="text-align:center"><%= @note.end_verse %></td>
+    <td style="text-align:left"><%= @note.note_text %></td>
+  </tr>
+</table>
+
+</br>
+<%= link_to 'Edit', edit_note_path(@note) %> |
+<%= link_to 'Back', notes_path %>

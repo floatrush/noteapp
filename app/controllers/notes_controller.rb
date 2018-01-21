@@ -5,8 +5,21 @@ class NotesController < ApplicationController
   def create
     @note = Note.new(note_params)
 
-    @note.save
-    redirect_to @note
+    if @note.save
+      redirect_to @note
+    else
+      render 'new'
+    end
+  end
+
+  def edit
+    @note = Note.find(params[:id])
+
+    if @note.update(note_params)
+      redirect_to @note
+    else
+      render 'edit'
+    end
   end
 
   def show

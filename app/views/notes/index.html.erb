@@ -11,12 +11,11 @@
 
   <% @notes.each do |note| %>
     <tr>
-      <td><%= note.book %></td>
-      <td><%= note.chapter %></td>
-      <td><%= note.start_verse %></td>
-      <td><%= note.end_verse %></td>
-      <td><%= note.note_text %></td>
-      <td><%= link_to 'Show', note_path(note) %></td>
+      <td style="text-align:center"><%= note.book %></td>
+      <td style="text-align:center"><%= note.chapter %></td>
+      <td style="text-align:center"><%= note.start_verse %></td>
+      <td style="text-align:center"><%= note.end_verse %></td>
+      <td style="text-align:left"><%= note.note_text %></td>
     </tr>
   <% end %>
 </table>
