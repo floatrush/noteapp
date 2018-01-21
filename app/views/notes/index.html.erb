@@ -1,0 +1,22 @@
+<h1>Listing Notes</h1>
+
+<table>
+  <tr>
+    <th>Book</th>
+    <th>Chapter</th>
+    <th>Start Verse</th>
+    <th>End Verse</th>
+    <th>Note</th>
+  </tr>
+
+  <% @notes.each do |note| %>
+    <tr>
+      <td><%= note.book %></td>
+      <td><%= note.chapter %></td>
+      <td><%= note.start_verse %></td>
+      <td><%= note.end_verse %></td>
+      <td><%= note.note_text %></td>
+      <td><%= link_to 'Show', note_path(note) %></td>
+    </tr>
+  <% end %>
+</table>

@@ -1,0 +1,32 @@
+<h1>New Note</h1>
+
+<%= form_with scope: :note, url: notes_path, local: true do |form| %>
+  <p>
+    <%= form.label :book %><br>
+    <%= form.text_field :book %>
+  </p>
+
+  <p>
+    <%= form.label :chapter %><br>
+    <%= form.number_field :chapter %>
+  </p>
+
+  <p>
+    <%= form.label :start_verse %><br>
+    <%= form.number_field :start_verse %>
+  </p>
+
+  <p>
+    <%= form.label :end_verse %><br>
+    <%= form.number_field :end_verse %>
+  </p>
+
+  <p>
+    <%= form.label :note_text %><br>
+    <%= form.text_area :note_text %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
